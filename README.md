@@ -23,7 +23,6 @@
 
 <p align="center">
   <a href="#rocket-sobre-o-desafio">Sobre o desafio</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#calendar-entrega">Entrega</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
 
@@ -40,8 +39,33 @@ Essa será uma aplicação para armazenar transações financeiras de entrada e 
  - [Express](https://expressjs.com/)
  - [TypeORM](https://typeorm.io/)
  - [uuidv4](https://www.npmjs.com/package/uuidv4)
+ 
+## Como rodar esse projeto.
 
-### Rotas da aplicação
+### :sheep: Clonando o repositório.
+```
+# Clone este repositório
+$ git clone https://github.com/LuizSerra/GoStack-FundamentosNode.git
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd gostack-fundamentos-node
+```
+### :computer: Rodando a aplicação.
+
+```
+# Instale as dependências
+$ yarn
+
+# Execute a Aplicação
+$ yarn dev:server
+
+# Execute o teste da Aplicação
+$ yarn test
+
+# O servidor inciará na porta:3333 - acesse http://localhost:3333
+```
+
+## :twisted_rightwards_arrows: Rotas da aplicação.
 
 - **`POST /transactions`**: A rota deve receber `title`, `value` e `type` dentro do corpo da requisição, sendo `type` o tipo da transação, que deve ser `income` para entradas (depósitos) e `outcome` para saídas (retiradas). Ao cadastrar uma nova transação, ela deve ser armazenada dentro de um objeto com o seguinte formato :
 
@@ -91,26 +115,19 @@ Essa será uma aplicação para armazenar transações financeiras de entrada e 
   }
 }
 ```
+## :computer: Quer contribuir com o Projeto? Saiba como:
 
-**Dica**: Dentro de balance, o income é a soma de todos os valores das transações com `type` income. O outcome é a soma de todos os valores das transações com `type` outcome, e o total é o valor de `income - outcome`.
+-   Faça um  **fork**  do projeto;
+-   Crie uma nova branch com as suas alterações:  `git checkout -b my-feature`
+-   Salve as alterações e crie uma mensagem de commit contando o que você fez:`git commit -m "feature: My new feature"`
+-   Envie as suas alterações:  `git push origin my-feature`
 
-**Dica 2**: Para fazer a soma dos valores, você pode usar a função [reduce](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) para agrupar as transações pela propriedade `type`, assim você irá conseguir somar todos os valores com facilidade e obter o retorno do `balance`.
+> Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](https://github.com/firstcontributions/first-contributions)
 
-### Especificação dos testes
-
-Em cada teste, tem uma breve descrição no que sua aplicação deve cumprir para que o teste passe.
-
-Caso você tenha dúvidas quanto ao que são os testes, e como interpretá-los, dé uma olhada em **[nosso FAQ](https://github.com/Rocketseat/bootcamp-gostack-desafios/tree/master/faq-desafios).**
-
-Para esse desafio temos os seguintes testes:
-
-- **`should be able to create a new transaction`**: Para que esse teste passe, sua aplicação deve permitir que uma transação seja criada, e retorne um json com a transação criada.
-
-- **`should be able to list the transactions`**: Para que esse teste passe, sua aplicação deve permitir que seja retornado um objeto contendo todas as transações junto ao balanço de income, outcome e total das transações que foram criadas até o momento.
-
-- **`should not be able to create outcome transaction without a valid balance`**: Para que esse teste passe, sua aplicação não deve permitir que uma transação do tipo `outcome` extrapole o valor total que o usuário tem em caixa, retornando uma resposta com código HTTP 400 e uma mensagem de erro no seguinte formato: `{ error: string }`
 
 ## :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+Feito com dedicação por Luiz Serra 👋🏽 [Entre em contato](https://www.linkedin.com/in/luizserra)!
 
