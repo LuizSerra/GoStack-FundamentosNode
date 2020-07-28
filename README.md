@@ -40,7 +40,7 @@ Essa será uma aplicação para armazenar transações financeiras de entrada e 
  - [TypeORM](https://typeorm.io/)
  - [uuidv4](https://www.npmjs.com/package/uuidv4)
  
-## Como rodar esse projeto.
+## :key: Como rodar esse projeto.
 
 ### :sheep: Clonando o repositório.
 ```
